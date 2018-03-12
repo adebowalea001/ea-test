@@ -6,7 +6,7 @@ Setup:
 
 Install webpack:
 ------------------------------------------------------------
-<strong>sudo npm i -g webpack</strong><br />
+<strong>sudo npm i -g webpack@3.11.0</strong><br />
 This is needed only if you do not already have webpack installed globally.<br /><br />
 
 Run webpack:
