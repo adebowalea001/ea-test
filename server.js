@@ -6,9 +6,13 @@ app.use('/public', express.static('assets'));
 app.get('*', (req, res) => {
   res.send(`
     <html>
-      <head><title>Emirates Coding Tests</title></head>
+      <head>
+        <title>Emirates Coding Tests</title>
+        <link rel="stylesheet" href="public/bootstrap.min.css"/>
+        <link rel="stylesheet" href="public/styles.css"/>
+      </head>
       <body>
-        <div id="root"><div>
+        <div id="root"></div>
       </body>
       <script src="public/react-bundle.js""></script>
     </html>

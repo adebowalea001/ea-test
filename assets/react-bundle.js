@@ -21124,60 +21124,79 @@ var User = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        null,
-        _react2.default.createElement("br", null),
+        { className: "main" },
         _react2.default.createElement(
           "button",
-          { onClick: this.handleClick },
+          { className: "btn btn-success", onClick: this.handleClick },
           "Show User Details"
         ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement("br", null),
-        "Name:",
+        _react2.default.createElement("div", { className: "clearfix" }),
         _react2.default.createElement(
-          "span",
-          { ref: "username", username: this.state.user.username },
-          this.state.user.username
+          "div",
+          { className: "titles" },
+          "Name:"
         ),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement("br", null),
-        "Type of Contract:\xA0 Consultant: ",
-        _react2.default.createElement("input", { type: "radio",
-          ref: "consultant",
-          name: "contract",
-          value: (this.state.user.contract === 'Consultant').toString(),
-          checked: this.state.user.contract === 'Consultant' }),
-        "\xA0 Parmanent: ",
-        _react2.default.createElement("input", { type: "radio",
-          ref: "parmanent",
-          name: "contract",
-          value: (this.state.user.contract === 'Parmanent').toString(),
-          checked: this.state.user.contract === 'Parmanent' }),
-        _react2.default.createElement("br", null),
-        _react2.default.createElement("br", null),
-        "Country of Residence:\xA0",
         _react2.default.createElement(
-          "select",
-          { ref: "country", value: this.state.user.country },
+          "div",
+          { className: "user_info username" },
           _react2.default.createElement(
-            "option",
-            { value: "ae" },
-            "United Arab Emirates"
-          ),
+            "span",
+            { ref: "username", username: this.state.user.username },
+            this.state.user.username
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "titles" },
+          "Type of Contract:"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "user_info" },
+          "Consultant: ",
+          _react2.default.createElement("input", { type: "radio",
+            ref: "consultant",
+            name: "contract",
+            value: (this.state.user.contract === 'Consultant').toString(),
+            checked: this.state.user.contract === 'Consultant' }),
+          "\xA0 Parmanent: ",
+          _react2.default.createElement("input", { type: "radio",
+            ref: "parmanent",
+            name: "contract",
+            value: (this.state.user.contract === 'Parmanent').toString(),
+            checked: this.state.user.contract === 'Parmanent' })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "titles" },
+          "Country of Residence:"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "user_info" },
           _react2.default.createElement(
-            "option",
-            { value: "ng" },
-            "Nigeria"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "uk" },
-            "United Kingdom"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "us" },
-            "United States of America"
+            "select",
+            { ref: "country", value: this.state.user.country },
+            _react2.default.createElement(
+              "option",
+              { value: "ae" },
+              "United Arab Emirates"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "ng" },
+              "Nigeria"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "uk" },
+              "United Kingdom"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "us" },
+              "United States of America"
+            )
           )
         )
       );

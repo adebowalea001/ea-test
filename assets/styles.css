@@ -1,0 +1,38 @@
+.main {
+  width: 35%;
+  min-width: 550px;
+  height: 40%;
+  min-height: 380px;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 2% 3%;
+  background-color: #dfeccb;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+}
+
+.main > button {
+  margin-bottom: 10%;
+  width: 50%;
+}
+
+.main > .titles, .main > .user_info {
+  position: relative;
+  width: 49%;
+  margin-top: 5%;
+  float:left;
+}
+
+.main > .titles {
+  font-weight: bold;
+}
+
+.main > .user_info > radio {
+  height: 30px;
+}
+
+.username {
+  height: 25px;
+  background-color: #fff;
+  padding-left: 8px;
+}

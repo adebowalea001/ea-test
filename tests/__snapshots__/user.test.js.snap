@@ -2,62 +2,86 @@
 
 exports[`User -- should render <User /> component 1`] = `
 Array [
-  <div>
-    <br />
+  <div
+    className="main"
+  >
     <button
+      className="btn btn-success"
       onClick={[Function]}
     >
       Show User Details
     </button>
-    <br />
-    <br />
-    Name:
-    <span
-      username={undefined}
+    <div
+      className="clearfix"
     />
-    <br />
-    <br />
-    Type of Contract:  Consultant: 
-    <input
-      checked={false}
-      name="contract"
-      type="radio"
-      value="false"
-    />
-      Parmanent: 
-    <input
-      checked={false}
-      name="contract"
-      type="radio"
-      value="false"
-    />
-    <br />
-    <br />
-    Country of Residence: 
-    <select
-      value={undefined}
+    <div
+      className="titles"
     >
-      <option
-        value="ae"
+      Name:
+    </div>
+    <div
+      className="user_info username"
+    >
+      <span
+        username={undefined}
+      />
+    </div>
+    <div
+      className="titles"
+    >
+      Type of Contract:
+    </div>
+    <div
+      className="user_info"
+    >
+      Consultant: 
+      <input
+        checked={false}
+        name="contract"
+        type="radio"
+        value="false"
+      />
+        Parmanent: 
+      <input
+        checked={false}
+        name="contract"
+        type="radio"
+        value="false"
+      />
+    </div>
+    <div
+      className="titles"
+    >
+      Country of Residence:
+    </div>
+    <div
+      className="user_info"
+    >
+      <select
+        value={undefined}
       >
-        United Arab Emirates
-      </option>
-      <option
-        value="ng"
-      >
-        Nigeria
-      </option>
-      <option
-        value="uk"
-      >
-        United Kingdom
-      </option>
-      <option
-        value="us"
-      >
-        United States of America
-      </option>
-    </select>
+        <option
+          value="ae"
+        >
+          United Arab Emirates
+        </option>
+        <option
+          value="ng"
+        >
+          Nigeria
+        </option>
+        <option
+          value="uk"
+        >
+          United Kingdom
+        </option>
+        <option
+          value="us"
+        >
+          United States of America
+        </option>
+      </select>
+    </div>
   </div>,
 ]
 `;
