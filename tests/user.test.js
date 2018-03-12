@@ -2,7 +2,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
 import User from '../react/components/user.jsx';
-import axios from 'axios';
 
 function handleClick() {
   return true;
