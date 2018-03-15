@@ -1,10 +1,10 @@
 require('babel-register')({
   presets: ['env', 'react']
 });
-
+const port = 3000;
 const app = require('./server-entry.js')();
 const httpServer = require('http').Server(app);
 
-httpServer.listen(3000, err => {
-  console.log('Server listening on http://localhost:3000');
+httpServer.listen(port, err => {
+  console.log('Server listening on http://localhost:' + port);
 });
