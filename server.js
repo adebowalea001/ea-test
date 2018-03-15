@@ -1,32 +1,10 @@
-const express = require('express');
-const app = express();
-
-app.use('/public', express.static('assets'));
-
-app.get('*', (req, res) => {
-  res.send(`
-    <html>
-      <head>
-        <title>Emirates Coding Tests</title>
-        <link rel="stylesheet" href="public/bootstrap.min.css"/>
-        <link rel="stylesheet" href="public/styles.css"/>
-      </head>
-      <body>
-        <div id="root"></div>
-      </body>
-      <script src="public/react-bundle.js""></script>
-    </html>
-  `);
+require('babel-register')({
+  presets: ['env', 'react']
 });
 
-app.post('/get_user_details', (req, res) => {
-  console.log("req.url: ", req.url);
+const app = require('./server-entry.js')();
+const httpServer = require('http').Server(app);
 
-  res.json({
-    username: "Amilea",
-    contract: "Consultant",
-    country: "uk"
-  });
+httpServer.listen(3000, err => {
+  console.log('Server listening on http://localhost:3000');
 });
-
-app.listen(3000);
