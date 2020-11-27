@@ -1,0 +1,51 @@
+language: node_js
+
+os:
+  - linux
+
+node_js:
+  - "12.16.1"
+
+# cache:
+#   yarn: true
+#   directories:
+#     - "~/.cache"
+
+stages:
+  - name: test
+    if: type = pull_request
+  - name: staging
+    if: branch = develop AND (NOT type = pull_request)
+  # - name: production
+  #   if: branch = master AND (NOT type = pull_request)
+
+jobs:
+  include:
+    - stage: test
+      # before_script:
+      #   - cp ./.env.example ./.env
+      script:
+        - yarn test
+
+    - stage: develop
+      env:
+        - API_ENDPOINT="http://localhost:3000/api"
+      script:
+        - yarn test
+#     - stage: staging
+#       env:
+#         - API_ENDPOINT="http://localhost:3000/api"
+#       script:
+#         - yarn test
+
+#     - stage: production
+#       env:
+#         - API_ENDPOINT="http://localhost:3000/api"
+#       script:
+#         - yarn test
+#       after_success:
+#         - yarn deploy
+
+# env:
+#   global:
+#     - APP_NAME="EK Interview Test"
