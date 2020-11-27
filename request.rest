@@ -1,0 +1,34 @@
+@TRAVIS_API_ENDPOINT=https://api.travis-ci.com
+@TRAVIS_API_TOKEN=hidden:hidden:hidden:hidden
+
+POST {{TRAVIS_API_ENDPOINT}}/repo/adebowalea001%2Fea-test/requests
+Content-Type: application/json
+Accept: application/json
+Authorization: token {{TRAVIS_API_TOKEN}}
+Travis-API-Version: 3
+
+{"request": {"branch":"develop"}}
+
+###
+GET {{TRAVIS_API_ENDPOINT}}/user
+Content-Type: application/json
+Accept: application/json
+Authorization: token {{TRAVIS_API_TOKEN}}
+Travis-API-Version: 3
+
+###
+GET {{TRAVIS_API_ENDPOINT}}/user
+Content-Type: application/json
+Accept: application/json
+Authorization: token {{TRAVIS_API_TOKEN}}
+Travis-API-Version: 3
+
+###
+
+POST {{TRAVIS_API_ENDPOINT}}/repo/adebowalea001%2Fea-test/requests
+Content-Type: application/json
+Accept: application/json
+Authorization: token {{TRAVIS_API_TOKEN}}
+Travis-API-Version: 3
+
+{"request": {"branch":"feat/update-app"}}
