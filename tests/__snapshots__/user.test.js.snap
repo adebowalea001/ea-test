@@ -38,6 +38,7 @@ Array [
       <input
         checked={false}
         name="contract"
+        onChange={[Function]}
         type="radio"
         value="false"
       />
@@ -45,6 +46,7 @@ Array [
       <input
         checked={false}
         name="contract"
+        onChange={[Function]}
         type="radio"
         value="false"
       />

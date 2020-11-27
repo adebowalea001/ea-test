@@ -14,6 +14,10 @@ export default class User extends Component {
     });
   }
 
+  handleChange(_event) {
+    console.log(_event.target.value);
+  };
+
   render() {
     return (
       <div className="main">
@@ -29,12 +33,14 @@ export default class User extends Component {
                            ref="consultant"
                            name="contract"
                            value={ (this.state.user.contract === 'Consultant').toString() }
-                           checked={ this.state.user.contract === 'Consultant' }/>&nbsp;
+                           checked={ this.state.user.contract === 'Consultant' }
+                           onChange={this.handleChange}/>&nbsp;
         Parmanent: <input type="radio"
                            ref="parmanent"
                            name="contract"
                            value={ (this.state.user.contract === 'Parmanent').toString() }
-                           checked={ this.state.user.contract === 'Parmanent' }/>
+                           checked={ this.state.user.contract === 'Parmanent' }
+                           onChange={this.handleChange}/>
         </div>
         <div className="titles">Country of Residence:</div>
         <div className="user_info">
